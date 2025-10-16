@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Custom micro-animations */
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes scale-fade-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98) }
+  to { opacity: 1; transform: translateY(0) scale(1) }
+}
+
+@keyframes slide-up-fade-in {
+  from { opacity: 0; transform: translateY(8px) }
+  to { opacity: 1; transform: translateY(0) }
+}
+
+.animate-fade-in { animation: fade-in .15s ease-out both }
+.animate-scale-fade-in { animation: scale-fade-in .18s cubic-bezier(.22,.61,.36,1) both }
+.animate-slide-up { animation: slide-up-fade-in .18s ease-out both }
+
+/* Smooth height resize helper */
+.transition-max-height { transition: max-height .25s ease }
